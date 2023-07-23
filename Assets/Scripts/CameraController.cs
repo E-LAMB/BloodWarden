@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
     public Transform player;
     public float speed = 0.5f;
     public float y_lock = 0.1f;
+    public bool use_lock;
 
     public Vector3 offset;
     
@@ -16,7 +17,10 @@ public class CameraController : MonoBehaviour
         Vector3 desiredPosition = player.position + offset;
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, speed);
 
-        smoothedPosition.y = y_lock;
+        if (use_lock)
+        {
+            smoothedPosition.y = y_lock;
+        }
 
         transform.position = smoothedPosition;
         
