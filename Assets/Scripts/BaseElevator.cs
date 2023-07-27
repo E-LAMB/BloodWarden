@@ -34,12 +34,6 @@ public class BaseElevator : MonoBehaviour
                 the_player.in_control = false;
                 loading = true;
                 waiting_time = 0f;
-
-                Mind.item_1 = planning.all_texts[planning.chosen_1 + 1];
-                Mind.item_2 = planning.all_texts[planning.chosen_2 + 1];
-                Mind.item_3 = planning.all_texts[planning.chosen_3 + 1];
-                Mind.item_4 = planning.all_texts[planning.chosen_4 + 1];
-                Mind.item_5 = planning.all_texts[planning.chosen_5 + 1];
             }
         }
 
